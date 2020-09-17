@@ -6,14 +6,14 @@ body {
   font-family: Optima, "Helvetica Neue", Helvetica;
   font-size: 16px;
   line-height: 20px;
-  max-width: 950px;
+  /* max-width: 950px; */
   /* background-color: rgba(170, 170, 170, 0.21); */
   background-color: white;
 }
 
 section,
 p,
-nav,
+.nav,
 header {
   font-size: inherit;
   line-height: inherit;
@@ -27,11 +27,11 @@ a {
   color: #f4720d;
 }
 
-/* .content,
-body,
+.content,
 footer {
   max-width: 950px;
-} */
+  margin: 0px auto;
+}
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -44,26 +44,33 @@ footer {
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-nav ul,
-nav ul li {
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 1.3em;
+  padding: 0px 0px 0px 0px;
+  /* background-color: #f79950; */
+  background-image: linear-gradient(to bottom, #f4a460, white);
+  z-index: 1000;
+}
+
+.fixed-width-navbar {
+  width: 950px;
+  margin: 0px auto;
+}
+
+.nav ul,
+.nav ul li {
   display: inline-block;
 }
 
-nav::after {
-  /* Clearfix */
-  content: "";
-  display: table;
-  clear: both;
-}
-nav a {
+.nav a {
   color: inherit;
   text-decoration: none;
 }
-nav li {
-  margin-right: 50px;
-}
 
-nav .left {
+.nav .left {
   /* font-size: 1.5em; */
   margin-top: 15px;
   font-variant: small-caps;
@@ -71,41 +78,14 @@ nav .left {
   font-size: 1.3em;
 }
 
-nav .right {
+.nav .right {
   float: right;
   margin-top: 21px;
 }
-nav {
-  padding: 0px 0px;
-  font-size: 1.3em;
-  /*position: fixed;*/
-  /* background-color: khaki; */
+
+.nav .right li {
+  margin-left: 50px;
 }
-
-/*#navbar {*/
-/*  overflow: hidden;*/
-/*}*/
-/*!* Navbar links *!*/
-/*#navbar a{*/
-/*  float: left;*/
-/*  display: block;*/
-/*  text-align: center;*/
-/*  padding: 14px;*/
-/*  text-decoration: none;*/
-/*}*/
-
-/* Page content */
-/*.content {*/
-/*  padding: 0px;*/
-/*}*/
-/*.sticky {*/
-/*  position: fixed;*/
-/*  top: 0;*/
-/*  !*width: 100%;*!*/
-/*}*/
-/*.sticky + .content {*/
-/*  padding-top: 20px;*/
-/*}*/
 
 .majorrule {
   margin: 0px 0px;
@@ -116,17 +96,17 @@ nav {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   text-align: center;
   width: 50%;
-  margin: 10px auto 30px auto;
+  margin: 90px auto 30px auto;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 }
 
 .logo {
   text-align: right;
-  margin-right: 50px;
+  margin-right: 10px;
 }
 .logo img {
   width: 80px;
@@ -139,7 +119,7 @@ header {
   font-weight: bolder;
   font-variant: small-caps;
   text-align: left;
-  margin: auto 50px auto 0px;
+  margin: auto 50px auto 30px;
   padding: 20px 0px;
 }
 
@@ -387,6 +367,16 @@ table .catd,
   color: black;
 }
 
+hr.bottomrule {
+  width: 950px;
+  border: 0;
+  height: 0;
+  margin-bottom: 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 footer {
+  margin-top: 0px;
   text-align: center;
 }
