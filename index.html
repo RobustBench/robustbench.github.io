@@ -109,11 +109,16 @@
           on this topic, but it is still unclear which approaches
           <em>really</em> work and which only lead to
           <a href="https://arxiv.org/abs/1802.00420">overestimated robustness</a
-          >. We start from benchmarking the Linf- and L2-robustness since these
-          are the most studied settings in the literature. We plan to extend the
-          benchmark to other threat models in the future: first to other
-          Lp-norms and then to more general perturbation sets.
-          <strong>AdvBench</strong> provides two key modules:
+          >. We start from benchmarking the \(\ell_\infty\) and
+          \(\ell_2\)-robustness since these are the most studied settings in the
+          literature. We use
+          <a href="https://github.com/fra31/auto-attack">Auto-attack</a>, an
+          ensemble of white-box and black-box attacks, to standardized the
+          evaluation of robustness (futher details are in our
+          <a href="#">report</a>). We plan to extend the benchmark to other
+          threat models in the future: first to other Lp-norms and then to more
+          general perturbation sets. <strong>AdvBench</strong> provides two key
+          modules:
         </p>
         <div class="flexbox-container features">
           <div class="element">
