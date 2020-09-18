@@ -3,7 +3,7 @@
 }
 body {
   margin: 0 auto;
-  font-family: Optima, "Helvetica Neue", Helvetica;
+  font-family: Optima, Palatino, Georgia, "Helvetica Neue", Helvetica;
   font-size: 16px;
   line-height: 20px;
   /* max-width: 950px; */
@@ -232,6 +232,8 @@ pre > code {
 
 .scroller img {
   flex: 0 0 auto;
+  height: 220px;
+  width: auto;
   margin: 5px 10px 5px 10px;
 }
 
@@ -365,6 +367,10 @@ table .catd,
 
 .box2 li i {
   color: black;
+}
+
+#contribute {
+  margin-top: 20px;
 }
 
 hr.bottomrule {
