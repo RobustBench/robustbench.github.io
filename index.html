@@ -79,7 +79,7 @@
       </ul>
       <ul class="right">
         <li><a href="#leaderboard">Leaderboard</a></li>
-        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contribute">Contribute</a></li>
         <li><a href="https://github.com/AdvBench/advbench">Model Zoo 🚀</a></li>
       </ul>
@@ -819,29 +819,133 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
       </table>
     </section>
 
-    <section id="contribute">
-      <!--
-      <div class="heading"><p>Contributions</p></div>
-      <hr />
-      <p class="doublealign">
-      Some details on welcoming contributions. Quisque id ullamcorper sem. In
-      hac habitasse platea dictumst. Suspendisse a semper libero. Nullam a enim
-      non nisi ultricies cursus. Quisque eu tincidunt dolor. Fusce non risus eu
-      purus tempor auctor. Fusce et placerat turpis. Proin aliquet lorem mi, at
-      tempus sapien ornare id. Mauris accumsan, nulla vel posuere sollicitudin,
-      nisi massa tristique mauris, eget ullamcorper risus tellus a nibh.
-      Curabitur tempus dignissim magna in sagittis.
+
+    <div class="vspace30"></div>
+    <div class="vspace30"></div>
+
+    <section id="faq">
+    <div class="heading">
+      <p>
+        FAQ
       </p>
+    </div>
+
+    <p class="qa-box">
+      <span class="question"
+        >&#10148; Wait, how is it different from
+        <a href="https://www.robust-ml.org/">robust-ml.org</a>? 🤔
+      </span>
+      <br />
+      <span class="answer"
+        ><a href="https://www.robust-ml.org/">robust-ml.org</a> focuses on
+        <em>adaptive</em> evaluations, but we provide a
+        <strong>standardized benchmark</strong>. Adaptive evaluations are great
+        (e.g., see
+        <a href="https://arxiv.org/abs/2002.08347">Tramer et al., 2020</a>) but
+        very time consuming and not standardized.</span
+      >
+    </p>
+
+    <p class="qa-box">
+      <span class="question"
+        >&#10148; How is it related to libraries like
+        <a href="https://github.com/bethgelab/foolbox">foolbox</a> /
+        <a href="https://github.com/tensorflow/cleverhans">cleverhans</a> /
+        <a href="https://github.com/BorealisAI/advertorch">advertorch</a>? 🤔
+      </span>
+      <br />
+      <span class="answer"
+        >These libraries provide implementations of different <em>attacks</em>.
+        Besides the standardized benchmark,
+        <strong>AdvBench</strong> additionally provides a repository of the most
+        robust models. So you can start using the robust models in one line of
+        code (see the tutorial
+        <a href="https://github.com/AdvBench/advbench#model-zoo-quick-tour">here</a>).</span
+      >
+    </p>
+
+    <p class="qa-box">
+      <span class="question"
+        >&#10148; Why is Lp-robustness still interesting in 2020? 🤔
+      </span>
+      <br />
+      <span class="answer"
+        >There are numerous interesting applications of Lp-robustness that span
+        transfer learning (<a href="https://arxiv.org/abs/2007.08489"
+          >Salman et al. (2020)</a
+        >, <a href="https://arxiv.org/abs/2007.05869">Utrera et al. (2020)</a>),
+        interpretability (<a href="https://arxiv.org/abs/1805.12152"
+          >Tsipras et al. (2018)</a
+        >, <a href="https://arxiv.org/abs/1910.08640">Kaur et al. (2019)</a>,
+        <a href="https://arxiv.org/abs/1906.00945">Engstrom et al. (2019)</a>),
+        security (<a href="https://arxiv.org/abs/1811.03194"
+          >Tramèr et al. (2018)</a
+        >,
+        <a href="https://arxiv.org/abs/1906.07153">Saadatpanah et al. (2019)</a
+        >), generalization (<a href="https://arxiv.org/abs/1911.09665"
+          >Xie et al. (2019)</a
+        >, <a href="https://arxiv.org/abs/1909.11764">Zhu et al. (2019)</a>,
+        <a href="https://arxiv.org/abs/2004.10934">Bochkovskiy et al. (2020)</a
+        >), robustness to unseen perturbations (<a
+          href="https://arxiv.org/abs/1911.09665"
+          >Xie et al. (2019)</a
+        >, <a href="https://arxiv.org/abs/1905.01034">Kang et al. (2019)</a>),
+        stabilization of GAN training (<a
+          href="https://arxiv.org/abs/2008.03364"
+          >Zhong et al. (2020)</a
+        >).</span
+      >
+    </p>
+
+    <p class="qa-box">
+      <span class="question"
+        >&#10148; Does this benchmark only focus on Lp-robustness? 🤔
+      </span>
+      <br />
+      <span class="answer"
+        >Not at all! Lp-robustness is the most well-studied area, so we focus on
+        it first. However, in the future, we plan to extend the benchmark to
+        other perturbations sets beyond Lp-balls.</span
+      >
+    </p>
+
+    <p class="qa-box">
+      <span class="question">&#10148; What about verified adversarial robustness? 🤔 </span>
+      <br />
+      <span class="answer"
+      >We specifically focus on defenses which improve <em>empirical</em> robustness,
+        given the lack of clarity regarding which approaches really improve robustness and which only make
+        some particular attacks unsuccessful.
+        For methods targeting verified robustness, we encourage the readers to check
+        out <a href="https://arxiv.org/abs/1902.08722">Salman et al. (2019)</a> and
+        <a href="https://arxiv.org/abs/2009.04131">Li et al. (2020)</a>.
+      </span>
+    </p>
+
+    <p class="qa-box">
+      <span class="question"
+        >&#10148; What if I have a better attack than the one used in this
+        benchmark? 🤔
+      </span>
+      <br />
+      <span class="answer"
+        >We will be happy to add a better attack or any adaptive evaluation that
+        would complement our default standardized attacks.</span
+      >
+    </p>
+  </section>
 
 
-      <div class="vspace30"></div>
-      -->
+    <div class="vspace30"></div>
+    <div class="vspace30"></div>
+
+    <section id="contribute">
       <div class="details">
         <div class="box2">
           <p>Contribute to AdvBench!</p>
           <div class="divider"><hr /></div>
-          We welcome any contribution in terms of both new robust models and
-          evaluations. Please check <a href=""> here</a> for more details.
+          We welcome any contribution in terms of both new robust models and evaluations. Please check
+          <a href="https://github.com/AdvBench/advbench#how-to-contribute">here</a> for more details.
           <br />
           <br />
           Feel free to contact us at

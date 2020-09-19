@@ -386,3 +386,11 @@ footer {
   margin-top: 0px;
   text-align: center;
 }
+
+
+.question {
+  font-weight: bold;
+}
+.answer {
+  margin-left: 30px;
+}
