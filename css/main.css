@@ -243,6 +243,9 @@ pre > code {
 .vspace30 {
   margin-bottom: 30px;
 }
+.vspace50 {
+  margin-bottom: 50px;
+}
 section .heading {
   font-size: 1.8em;
   font-weight: normal;

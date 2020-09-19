@@ -109,18 +109,19 @@
             >more than 2&#39;000 papers</a
           >
           on this topic, but it is still unclear which approaches
-          <em>really</em> work and which only lead to
+          really work and which only lead to
           <a href="https://arxiv.org/abs/1802.00420">overestimated robustness</a
-          >. We start from benchmarking the \(\ell_\infty\) and
+          >. We start from benchmarking the \(\ell_\infty\)- and
           \(\ell_2\)-robustness since these are the most studied settings in the
           literature. We use
-          <a href="https://github.com/fra31/auto-attack">Auto-attack</a>, an
-          ensemble of white-box and black-box attacks, to standardized the
-          evaluation of robustness (futher details are in our
-          <a href="#">report</a>). We plan to extend the benchmark to other
-          threat models in the future: first to other Lp-norms and then to more
-          general perturbation sets. <strong>AdvBench</strong> provides two key
-          modules:
+          <a href="https://github.com/fra31/auto-attack">AutoAttack</a>, an
+          ensemble of white-box and black-box attacks, to standardize the
+          evaluation (for details see our <a href="#">report</a>).
+          Additionally, we open source the <a href="https://github.com/AdvBench/advbench">AdvBench library</a> that
+          contains models used for the leaderboard to facilitate their usage for downstream applications.
+<!--          We plan to extend the benchmark to other threat models in the future: first to other Lp-norms and then to more-->
+<!--          general perturbation sets.-->
+<!--          <strong>AdvBench</strong> provides two key modules:-->
         </p>
         <div class="flexbox-container features">
           <div class="element">
@@ -820,8 +821,7 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
     </section>
 
 
-    <div class="vspace30"></div>
-    <div class="vspace30"></div>
+    <div class="vspace50"></div>
 
     <section id="faq">
     <div class="heading">
@@ -936,8 +936,7 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
   </section>
 
 
-    <div class="vspace30"></div>
-    <div class="vspace30"></div>
+    <div class="vspace50"></div>
 
     <section id="contribute">
       <div class="details">
