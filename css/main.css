@@ -179,6 +179,11 @@ header {
   text-align: center;
 }
 
+img.analysis {
+  margin: 10px 0px 0px 0px;
+  width: 75%
+}
+
 .codeblock {
   text-align: left;
   padding: 0px 0px;
