@@ -402,3 +402,6 @@ footer {
 .answer {
   margin-left: 30px;
 }
+.qa-box {
+  text-align: justify;
+}
