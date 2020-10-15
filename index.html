@@ -18,7 +18,7 @@
   <meta charset="UTF-8" />
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1" />-->
   <meta name="viewport" content="width=1024" />
-  <title>AdvBench: Adversarial robustness benchmark</title>
+  <title>RobustBench: Adversarial robustness benchmark</title>
   <link
     rel="stylesheet"
     href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
@@ -75,13 +75,15 @@
   <div id="navbar" class="nav">
     <div class="fixed-width-navbar">
       <ul class="left">
-        <li><a href="#">AdvBench</a></li>
+        <li><a href="#">RobustBench</a></li>
       </ul>
       <ul class="right">
         <li><a href="#leaderboard">Leaderboard</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contribute">Contribute</a></li>
-        <li><a href="https://github.com/AdvBench/advbench">Model Zoo 🚀</a></li>
+        <li>
+          <a href="https://github.com/RobustBench/robustbench">Model Zoo 🚀</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -90,7 +92,7 @@
 
   <header>
     <div class="logo"><img src="./images/logo.png" alt="logo" /></div>
-    <div class="title">AdvBench</div>
+    <div class="title">RobustBench</div>
     <div class="description">
       A standardized benchmark for adversarial robustness
     </div>
@@ -102,8 +104,9 @@
     <section id="introduction">
       <div class="overview">
         <p class="doublealign">
-          The goal of <strong>AdvBench</strong> is to systematically track the
-          <em>real</em> progress in adversarial robustness. There are already
+          The goal of <strong>RobustBench</strong> is to systematically track
+          the <em>real</em> progress in adversarial robustness. There are
+          already
           <a
             href="https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html"
             >more than 2&#39;000 papers</a
@@ -118,12 +121,11 @@
           ensemble of white-box and black-box attacks, to standardize the
           evaluation (for details see our <a href="#">report</a>). Additionally,
           we open source the
-          <a href="https://github.com/AdvBench/advbench">AdvBench library</a>
+          <a href="https://github.com/RobustBench/robustbench"
+            >RobustBench library</a
+          >
           that contains models used for the leaderboard to facilitate their
           usage for downstream applications.
-          <!--          We plan to extend the benchmark to other threat models in the future: first to other Lp-norms and then to more-->
-          <!--          general perturbation sets.-->
-          <!--          <strong>AdvBench</strong> provides two key modules:-->
         </p>
         <div class="flexbox-container features">
           <div class="element">
@@ -155,22 +157,22 @@
           <p>Model Zoo</p>
           <div class="divider"><hr /></div>
           Check out the
-          <a href="https://github.com/AdvBench/advbench#model-zoo"
+          <a href="https://github.com/RobustBench/robustbench#model-zoo"
             >available models</a
           >
           and our
-          <a href="https://github.com/AdvBench/advbench#notebooks"
+          <a href="https://github.com/RobustBench/robustbench#notebooks"
             >Colab tutorials</a
           >.
           <div class="codeblock">
             <div class="vspace10"></div>
             <!--            <pre><code></code>-->
-            <!--!pip install git+https://github.com/AdvBench/advbench-->
+            <!--!pip install git+https://github.com/RobustBench/robustbench-->
 
-            <!--from advbench.utils import load_model-->
+            <!--from robustbench.utils import load_model-->
             <!--model = load_model(model_name='Carmon2019Unlabeled')-->
 
-            <!--from advbench.data import load_cifar10-->
+            <!--from robustbench.data import load_cifar10-->
             <!--x_test, y_test = load_cifar10(n_examples=100)-->
 
             <!--!pip install -q git+https://github.com/fra31/auto-attack-->
@@ -190,12 +192,12 @@
             >
               <pre
                 style="margin: 0; line-height: 125%"
-              ><span style="color: #888888">!pip install git+https://github.com/AdvBench/advbench</span>
+              ><span style="color: #888888">!pip install git+https://github.com/RobustBench/robustbench</span>
 
-<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">advbench.utils</span> <span style="color: #008800; font-weight: bold">import</span> load_model
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">robustbench.utils</span> <span style="color: #008800; font-weight: bold">import</span> load_model
 model <span style="color: #333333">=</span> load_model(model_name<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;Carmon2019Unlabeled&#39;</span>)
 
-<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">advbench.data</span> <span style="color: #008800; font-weight: bold">import</span> load_cifar10
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">robustbench.data</span> <span style="color: #008800; font-weight: bold">import</span> load_cifar10
 x_test, y_test <span style="color: #333333">=</span> load_cifar10(n_examples<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">100</span>)
 
 <span style="color: #888888">!pip install git+https://github.com/fra31/auto-attack</span>
@@ -476,7 +478,7 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
             <td class="aatd">49.25%</td>
             <td class="datatd">&#9746;</td>
             <td class="archtd">ResNet-50</td>
-            <td class="venuetd">GitHub,<br>Oct 2019</td>
+            <td class="venuetd">GitHub,<br />Oct 2019</td>
           </tr>
           <tr>
             <td class="ranktd">16</td>
@@ -873,7 +875,7 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
             <td class="aatd">69.24%</td>
             <td class="datatd">&#9746;</td>
             <td class="archtd">ResNet-50</td>
-            <td class="venuetd">GitHub,<br>Sep 2019</td>
+            <td class="venuetd">GitHub,<br />Sep 2019</td>
           </tr>
           <tr>
             <td class="ranktd">5</td>
@@ -970,10 +972,11 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
         <span class="answer"
           >These libraries provide implementations of different
           <em>attacks</em>. Besides the standardized benchmark,
-          <strong>AdvBench</strong> additionally provides a repository of the
+          <strong>RobustBench</strong> additionally provides a repository of the
           most robust models. So you can start using the robust models in one
           line of code (see the tutorial
-          <a href="https://github.com/AdvBench/advbench#model-zoo-quick-tour"
+          <a
+            href="https://github.com/RobustBench/robustbench#model-zoo-quick-tour"
             >here</a
           >).</span
         >
@@ -1061,11 +1064,11 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
     <section id="contribute">
       <div class="details">
         <div class="box2">
-          <p>Contribute to AdvBench!</p>
+          <p>Contribute to RobustBench!</p>
           <div class="divider"><hr /></div>
           We welcome any contribution in terms of both new robust models and
           evaluations. Please check
-          <a href="https://github.com/AdvBench/advbench#how-to-contribute"
+          <a href="https://github.com/RobustBench/robustbench#how-to-contribute"
             >here</a
           >
           for more details.
@@ -1134,7 +1137,7 @@ x_adv <span style="color: #333333">=</span> adversary<span style="color: #333333
 
   <footer>
     <small
-      >&copy; 2020, AdvBench;
+      >&copy; 2020, RobustBench;
       <a href="https://icons8.com/icon/100413/access"
         >Icons from Icons8</a
       ></small
