@@ -96,7 +96,7 @@ footer {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.3fr 2fr;
   text-align: center;
   width: 50%;
   margin: 90px auto 30px auto;
@@ -129,6 +129,7 @@ header {
   font-size: 1.3em;
   line-height: 1.5em;
   margin-left: 65px;
+  margin-top: -5px;
 }
 
 .flexbox-container {
