@@ -96,20 +96,21 @@ footer {
 
 header {
   display: grid;
-  grid-template-columns: 1.3fr 2fr;
+  /*grid-template-columns: 0.5fr 1.5fr;*/
+  max-width: 500px;
   text-align: center;
-  width: 50%;
+  /*width: 20%;*/
   margin: 90px auto 30px auto;
-  grid-column-gap: 0px;
+  /*grid-column-gap: 0px;*/
   grid-row-gap: 10px;
 }
 
 .logo {
-  text-align: right;
-  margin-right: 10px;
+  text-align: center;
+  /*margin-right: 10px;*/
 }
 .logo img {
-  width: 80px;
+  width: 60px;
 }
 .title {
   grid-column: 2;
@@ -118,8 +119,10 @@ header {
   color: #f58025;
   font-weight: bolder;
   font-variant: small-caps;
-  text-align: left;
-  margin: auto 50px auto 30px;
+  text-align: center;
+  /*margin: auto 50px auto 30px;*/
+  margin-left: -50px;
+  margin-top: 5px;
   padding: 20px 0px;
 }
 
@@ -128,7 +131,7 @@ header {
   grid-row: 2;
   font-size: 1.3em;
   line-height: 1.5em;
-  margin-left: 65px;
+  /*margin-left: 65px;*/
   margin-top: -5px;
 }
 
