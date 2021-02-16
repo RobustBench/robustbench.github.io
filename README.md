@@ -1,15 +1,10 @@
-# RobustBench: a standardized adversarial robustness benchmark
+# Website of RobustBench: a standardized adversarial robustness benchmark
 
-**Francesco Croce\* (University of Tübingen), Maksym Andriushchenko\* (EPFL), Vikash Sehwag\* (Princeton University), 
-Nicolas Flammarion (EPFL), Mung Chiang (Purdue University), Prateek Mittal (Princeton University), Matthias Hein (University of Tübingen)**
+**Leaderboard website**: [https://robustbench.github.io/](https://robustbench.github.io/)
 
-**Leaderboard**: [https://robustbench.github.io/](https://robustbench.github.io/)
+**Model Zoo**: [https://github.com/RobustBench/robustbench](https://github.com/RobustBench/robustbench)
 
 **Paper:** [https://arxiv.org/abs/2010.09670](https://arxiv.org/abs/2010.09670)
-
-
-<p align="center"><img src="images/leaderboard_screenshot_linf.png" width="700">
-<p align="center"><img src="images/leaderboard_screenshot_l2.png" width="700">
 
 
 ## Main idea
@@ -27,3 +22,6 @@ In particular, **we accept only defenses that are (1) have in general non-zero g
 (3) does not have an optimization loop.** Often, defenses that violate these 3 principles only make gradient-based attacks 
 harder but do not substantially improve robustness ([Carlini et al., (2019)](https://arxiv.org/abs/1902.06705)) except those
 that can present concrete provable guarantees (e.g. [Cohen et al., (2019)](https://arxiv.org/abs/1902.02918)).
+
+## Contributions
+Contributions both to the website and [model zoo](https://github.com/RobustBench/robustbench) are very welcome, as well as any suggestions for improving the project! We would be happy to hear any feedback on how to make it better and more comprehensive.
