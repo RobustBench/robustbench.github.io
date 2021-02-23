@@ -90,13 +90,15 @@
             papers</a>
           on this topic, but it is still unclear which approaches really work
           and which only lead to
-          <a href="https://arxiv.org/abs/1802.00420">overestimated robustness</a>. We start from benchmarking common corruptions,
+          <a href="https://arxiv.org/abs/1802.00420">overestimated robustness</a>. We start from benchmarking common
+          corruptions,
           \(\ell_\infty\)- and
           \(\ell_2\)-robustness since these are the most studied settings in the
           literature. We use
           <a href="https://github.com/fra31/auto-attack">AutoAttack</a>, an
           ensemble of white-box and black-box attacks, to standardize the
-          evaluation (for details see <a href="https://arxiv.org/abs/2010.09670">our paper</a>) of the \(\ell_p\) robustness and
+          evaluation (for details see <a href="https://arxiv.org/abs/2010.09670">our paper</a>) of the \(\ell_p\)
+          robustness and
           CIFAR-10-C for the evauation of robustness to common corruptions. Additionally,
           we open source the
           <a href="https://github.com/RobustBench/robustbench">RobustBench library</a>
@@ -178,8 +180,8 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
                 border-width: 0em 0em 0em 0em;
                 padding: 0.2em 0.6em;
               ">
-        
-</pre>
+
+              </pre>
             </div>
           </div>
         </div>
@@ -986,139 +988,145 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
           CIFAR-10-C
         </p>
       </div>
-      <table id="leaderboard3" class="datatable" style="width: 100%">
+      <table id="leaderboard2" class="datatable" style="width: 100%">
         <thead>
-        <tr>
+          <tr>
             <th class="rank">Rank</th>
             <th class="method">Method</th>
             <th class="ca">
-                Standard <br/>
-                accuracy
+              Standard <br />
+              accuracy
             </th>
             <th class="aa">
-                Robust <br/>
-                accuracy
+              Robust <br />
+              accuracy
             </th>
-            <th class="extra-data">Extra <br/>data</th>
+            <th class="extra-data">Extra <br />data</th>
             <th class="arch">Architecture</th>
             <th class="venue">Venue</th>
-        </tr>
+          </tr>
         </thead>
         <tbody>
-    
-        <tr>
+
+          <tr>
             <td class="ranktd">1</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
-    
+              <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to
+                Improve Robustness and Uncertainty</a>
+
             </td>
             <td class="catd">95.83%</td>
             <td class="aatd">89.09%</td>
             <td class="datatd">&#215;</td>
             <td class="archtd">ResNeXt</td>
             <td class="venuetd">ICLR 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">2</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
-    
+              <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to
+                Improve Robustness and Uncertainty</a>
+
             </td>
             <td class="catd">95.08%</td>
             <td class="aatd">88.82%</td>
             <td class="datatd">&#215;</td>
             <td class="archtd">WideResNet-40-2</td>
             <td class="venuetd">ICLR 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">3</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-    
-                <br>
-                <span class="td-footer">
-                    Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-                </span>
-    
+              <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training
+                against Norm-Bounded Adversarial Examples</a>
+
+              <br>
+              <span class="td-footer">
+                Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
+              </span>
+
             </td>
             <td class="catd">94.74%</td>
             <td class="aatd">87.68%</td>
             <td class="datatd">&#9745;</td>
             <td class="archtd">WideResNet-70-16</td>
             <td class="venuetd">arXiv, Oct 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">4</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-    
-                <br>
-                <span class="td-footer">
-                    Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-                </span>
-    
+              <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training
+                against Norm-Bounded Adversarial Examples</a>
+
+              <br>
+              <span class="td-footer">
+                Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
+              </span>
+
             </td>
             <td class="catd">90.90%</td>
             <td class="aatd">84.90%</td>
             <td class="datatd">&#215;</td>
             <td class="archtd">WideResNet-70-16</td>
             <td class="venuetd">arXiv, Oct 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">5</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-    
-                <br>
-                <span class="td-footer">
-                    Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-                </span>
-    
+              <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training
+                against Norm-Bounded Adversarial Examples</a>
+
+              <br>
+              <span class="td-footer">
+                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
+              </span>
+
             </td>
             <td class="catd">91.10%</td>
             <td class="aatd">81.84%</td>
             <td class="datatd">&#9745;</td>
             <td class="archtd">WideResNet-70-16</td>
             <td class="venuetd">arXiv, Oct 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">6</td>
             <td class="methoddt">
-                <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-    
-                <br>
-                <span class="td-footer">
-                    Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-                </span>
-    
+              <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training
+                against Norm-Bounded Adversarial Examples</a>
+
+              <br>
+              <span class="td-footer">
+                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
+              </span>
+
             </td>
             <td class="catd">85.29%</td>
             <td class="aatd">76.37%</td>
             <td class="datatd">&#215;</td>
             <td class="archtd">WideResNet-70-16</td>
             <td class="venuetd">arXiv, Oct 2020</td>
-        </tr>
-    
-        <tr>
+          </tr>
+
+          <tr>
             <td class="ranktd">7</td>
             <td class="methoddt">
-                <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
-    
+              <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
+
             </td>
             <td class="catd">94.78%</td>
             <td class="aatd">73.46%</td>
             <td class="datatd">&#215;</td>
             <td class="archtd">WideResNet-28-10</td>
             <td class="venuetd">N/A</td>
-        </tr>
-    
+          </tr>
+
         </tbody>
-    </table>
+      </table>
 
     </section>
 
