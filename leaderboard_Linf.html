@@ -16,8 +16,6 @@
         <th class="venue">Venue</th>
     </tr>
     </thead>
-
-
     <tbody>
     
     <tr>
@@ -706,6 +704,9 @@
     $(document).ready(function () {
       $("#leaderboard_Linf").DataTable({
         lengthMenu: [15, 25, 50, 75, 100],
+        "drawCallback": function( settings ) {
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        }
       });
     });
 </script>
