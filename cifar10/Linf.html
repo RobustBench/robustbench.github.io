@@ -1,4 +1,4 @@
-<table id="leaderboard_Linf" class="datatable" style="width: 100%">
+<table id="cifar10_leaderboard_Linf" class="datatable" style="width: 100%">
     <thead>
     <tr>
         <th class="rank">Rank</th>
@@ -725,11 +725,14 @@
 
 <script>
     $(document).ready(function () {
-      $("#leaderboard_Linf").DataTable({
-        lengthMenu: [15, 25, 50, 75, 100],
-        "drawCallback": function( settings ) {
-            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-        }
-      });
+        $("#cifar10_leaderboard_Linf").DataTable({
+            lengthMenu: [15, 25, 50, 75, 100],
+            "drawCallback": function (settings) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            },
+            language: {
+                searchPlaceholder: "Papers, architectures, venues"
+            }
+        });
     });
 </script>

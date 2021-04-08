@@ -1,4 +1,4 @@
-<table id="leaderboard_corruptions" class="datatable" style="width: 100%">
+<table id="cifar10_leaderboard_corruptions" class="datatable" style="width: 100%">
     <thead>
     <tr>
         <th class="rank">Rank</th>
@@ -206,10 +206,13 @@
 
 <script>
     $(document).ready(function () {
-      $("#leaderboard_corruptions").DataTable({
+      $("#cifar10_leaderboard_corruptions").DataTable({
         lengthMenu: [15, 25, 50, 75, 100],
         "drawCallback": function( settings ) {
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        },
+        language: {
+            searchPlaceholder: "Papers, architectures, venues"
         }
       });
     });

@@ -196,7 +196,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         </p>
       </div>
 
-      <div id="div_leaderboard_Linf"></div>
+      <div id="div_cifar10_Linf"></div>
 
     </section>
 
@@ -209,7 +209,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         </p>
       </div>
 
-      <div id="div_leaderboard_L2"></div>
+      <div id="div_cifar10_L2"></div>
 
     </section>
 
@@ -222,7 +222,20 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         </p>
       </div>
 
-      <div id="div_leaderboard_corruptions"></div>
+      <div id="div_cifar10_corruptions"></div>
+
+    </section>
+
+    <section id="leaderboard">
+      <div class="heading">
+        <p>
+          Leaderboard:
+          <span class="heading-math">CIFAR-100, \( \ell_\infty = 8/255 \)</span>,
+          Untargeted, AutoAttack
+        </p>
+      </div>
+
+      <div id="div_cifar100_Linf"></div>
 
     </section>
 
@@ -450,8 +463,9 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
     }
   </script>
   <script>
-    $("#div_leaderboard_Linf").load("leaderboard_Linf.html");
-    $("#div_leaderboard_L2").load("leaderboard_L2.html");
-    $("#div_leaderboard_corruptions").load("leaderboard_corruptions.html");
+    $("#div_cifar10_Linf").load("./cifar10/Linf.html");
+    $("#div_cifar10_L2").load("./cifar10/L2.html");
+    $("#div_cifar10_corruptions").load("./cifar10/corruptions.html");
+    $("#div_cifar100_Linf").load("./cifar100/Linf.html");
   </script>
 </body>
