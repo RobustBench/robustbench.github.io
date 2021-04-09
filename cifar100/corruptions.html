@@ -1,0 +1,98 @@
+<table id="cifar100_leaderboard_corruptions" class="datatable" style="width: 100%">
+    <thead>
+    <tr>
+        <th class="rank">Rank</th>
+        <th class="method">Method</th>
+        <th class="ca">
+            Standard <br/>
+            accuracy
+        </th>
+        <th class="aa">
+            Robust <br/>
+            accuracy
+        </th>
+        <th class="extra-data">Extra <br/>data</th>
+        <th class="arch">Architecture</th>
+        <th class="venue">Venue</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td class="ranktd">1</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
+            
+        </td>
+        <td class="catd">78.90%</td>
+        <td class="aatd">65.54%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNeXt29_32x4d</td>
+        <td class="venuetd">ICLR 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">2</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
+            
+        </td>
+        <td class="catd">76.28%</td>
+        <td class="aatd">64.63%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">WideResNet-40-2</td>
+        <td class="venuetd">ICLR 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">3</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
+            
+            <br>
+            <span class="td-footer">
+                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
+            </span>
+            
+        </td>
+        <td class="catd">69.15%</td>
+        <td class="aatd">56.72%</td>
+        <td class="datatd">&#9745;</td>
+        <td class="archtd">WideResNet-70-16</td>
+        <td class="venuetd">arXiv, Oct 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">4</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
+            
+            <br>
+            <span class="td-footer">
+                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
+            </span>
+            
+        </td>
+        <td class="catd">60.86%</td>
+        <td class="aatd">50.17%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">WideResNet-70-16</td>
+        <td class="venuetd">arXiv, Oct 2020</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $("#cifar100_leaderboard_corruptions").DataTable({
+            lengthMenu: [15, 25, 50, 75, 100],
+            "drawCallback": function (settings) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            },
+            language: {
+                searchPlaceholder: "Papers, architectures, venues"
+            }
+        });
+    });
+</script>
