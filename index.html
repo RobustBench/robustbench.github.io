@@ -17,41 +17,68 @@
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1" />-->
   <meta name="viewport" content="width=1024" />
   <title>RobustBench: Adversarial robustness benchmark</title>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
-  <script src="https://kit.fontawesome.com/b939870cfb.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.foundation.min.css" />
-
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css" />
+  <script src="https://kit.fontawesome.com/b939870cfb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.foundation.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.foundation.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.foundation.min.js"></script>
+
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
+
 <body>
-  <div id="navbar" class="nav">
-    <div class="fixed-width-navbar">
-      <ul class="left">
-        <li><a href="#">RobustBench</a></li>
-      </ul>
-      <ul class="right">
-        <li><a href="#leaderboard">Leaderboard</a></li>
-        <li><a href="https://arxiv.org/abs/2010.09670">Paper</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contribute">Contribute</a></li>
-        <li>
-          <a href="https://github.com/RobustBench/robustbench">Model Zoo 🚀</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"
+          >RobustBench</a>
+        <button
+          class="navbar-toggler navbar-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#main-navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#leaderboard">Leaderboards</a>
+            </li>
+            <li>
+              <a class="nav-link" href="https://arxiv.org/abs/2010.09670">Paper</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#faq"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#contribute">Contribute</a>
+            </li>
+            <li>
+              <a class="nav-link" href="https://github.com/RobustBench/robustbench"
+                >Model </a 
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Zoo 🚀 -->
 
   <!-- <hr class="toprule" /> -->
-
   <header>
     <div class="logo"><img src="./images/logo.png" alt="logo" /></div>
     <div class="title">RobustBench</div>
@@ -61,8 +88,7 @@
   </header>
   <!-- <hr class="toprule" /> -->
 
-  <!-- <hr class="title-rule" /> -->
-  <div class="content">
+  <div class="container">
     <section id="introduction">
       <div class="overview">
         <p class="doublealign">
@@ -187,7 +213,22 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       <div class="vspace10"></div>
     </section>
 
-    <section id="leaderboard">
+
+    <div id="leaderboard" class="container button-list">
+      <div class="heading">
+        <u>
+          Available Leaderboards
+        </u>
+      </div>
+      <a class="btn btn-secondary" href="#">CIFAR-10 (\( \ell_\infty\))</a>
+      <a class="btn btn-secondary" href="#">CIFAR-10 (\( \ell_2\))</a>
+      <a class="btn btn-secondary" href="#">CIFAR-10 (Corruptions)</a>
+      <a class="btn btn-secondary" href="#">CIFAR-100 (\( \ell_\infty\))</a>
+      <a class="btn btn-secondary" href="#">CIFAR-100 (Corruptions)</a>
+    </div>
+
+
+    <section class="container">
       <div class="heading">
         <p>
           Leaderboard:
