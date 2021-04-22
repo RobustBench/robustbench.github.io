@@ -221,17 +221,18 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
           Available Leaderboards
         </u>
       </div>
-      <a class="btn btn-secondary" href="#div_cifar10_Linf">CIFAR-10 (\( \ell_\infty\))</a>
-      <a class="btn btn-secondary" href="#div_cifar10_L2">CIFAR-10 (\( \ell_2\))</a>
-      <a class="btn btn-secondary" href="#div_cifar10_corruptions">CIFAR-10 (Corruptions)</a>
-      <a class="btn btn-secondary" href="#div_cifar100_Linf">CIFAR-100 (\( \ell_\infty\))</a>
-      <a class="btn btn-secondary" href="#div_cifar100_corruptions">CIFAR-100 (Corruptions)</a>
+      <a class="btn btn-secondary" href="#div_cifar10_Linf_heading">CIFAR-10 (\( \ell_\infty\))</a>
+      <a class="btn btn-secondary" href="#div_cifar10_L2_heading">CIFAR-10 (\( \ell_2\))</a>
+      <a class="btn btn-secondary" href="#div_cifar10_corruptions_heading">CIFAR-10 (Corruptions)</a>
+      <a class="btn btn-secondary" href="#div_cifar100_Linf_heading">CIFAR-100 (\( \ell_\infty\))</a>
+      <a class="btn btn-secondary" href="#div_cifar100_corruptions_heading">CIFAR-100 (Corruptions)</a>
     </div>
 
 
-    <section class="container">
+    <section class="container" id="div_cifar10_Linf_heading">
       <div class="heading">
         <p>
+<!--          <div style="opacity:0;">1<br>1<br>1<br>1</div> &lt;!&ndash; Needed to introduce a margin for the navigation bar between leaderboards &ndash;&gt;-->
           Leaderboard:
           <span class="heading-math">CIFAR-10, \( \ell_\infty = 8/255 \)</span>,
           Untargeted, AutoAttack
@@ -239,12 +240,12 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       </div>
 
       <div id="div_cifar10_Linf"></div>
-
     </section>
 
     <section>
-      <div class="heading">
+      <div class="heading" id="div_cifar10_L2_heading">
         <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-10, \( \ell_2 = 0.5 \)</span>,
           Untargeted, AutoAttack
@@ -252,12 +253,12 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       </div>
 
       <div id="div_cifar10_L2"></div>
-
     </section>
 
     <section>
-      <div class="heading">
+      <div class="heading" id="div_cifar10_corruptions_heading">
         <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-10, Common Corruptions</span>,
           CIFAR-10-C
@@ -265,12 +266,12 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       </div>
 
       <div id="div_cifar10_corruptions"></div>
-
     </section>
 
-    <section id="leaderboard">
-      <div class="heading">
+    <section>
+      <div class="heading" id="div_cifar100_Linf_heading">
         <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-100, \( \ell_\infty = 8/255 \)</span>,
           Untargeted, AutoAttack
@@ -278,19 +279,21 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       </div>
 
       <div id="div_cifar100_Linf"></div>
-
     </section>
 
     <section>
-      <div class="heading">
+      <div class="heading" id="div_cifar100_corruptions_heading">
         <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-100, Common Corruptions</span>,
           CIFAR-100-C
         </p>
       </div>
 
+<!--      <div id="div_cifar100_corruptions_pre_margin" style="margin-top: 100px;">123</div>-->
       <div id="div_cifar100_corruptions"></div>
+    </section>
 
     <div class="vspace30"></div>
 
