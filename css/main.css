@@ -30,7 +30,7 @@ a {
 
 .container,
 footer {
-  max-width: 960px;
+  max-width: 1250px;
   margin: 0px auto;
 }
 
@@ -358,16 +358,17 @@ table .ca {
 
 table .aatd,
 .catd,
-.methoddt {
+.methoddt,
+.aa-extd {
   font-size: 1.1em;
 }
 
-table .datatd {
+table .datatd, .flagsd-emoji {
   font-size: 2em;
 }
 
 table .catd,
-.aatd {
+.aatd, .aa-extd {
   font-family: monospace;
 }
 
