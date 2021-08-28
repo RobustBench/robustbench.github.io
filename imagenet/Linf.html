@@ -1,0 +1,119 @@
+<table id="imagenet_leaderboard_Linf" class="datatable" style="width: 100%">
+    <thead>
+    <tr>
+        <th class="rank">Rank</th>
+        <th class="method">Method</th>
+        <th class="ca">
+            Standard <br/>
+            accuracy
+        </th>
+        <th class="aa">
+            Robust <br/>
+            accuracy
+        </th>
+        <th class="extra-data">Extra <br/>data</th>
+        <th class="arch">Architecture</th>
+        <th class="venue">Venue</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td class="ranktd">1</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2007.08489" target="_blank">Do Adversarially Robust ImageNet Models Transfer Better?</a>
+            
+        </td>
+        <td class="catd">68.46%</td>
+        <td class="aatd">38.14%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">WideResNet-50-2</td>
+        <td class="venuetd">NeurIPS 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">2</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2007.08489" target="_blank">Do Adversarially Robust ImageNet Models Transfer Better?</a>
+            
+        </td>
+        <td class="catd">64.02%</td>
+        <td class="aatd">34.96%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">NeurIPS 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">3</td>
+        <td class="methoddt">
+            <a href="https://github.com/MadryLab/robustness" target="_blank">Robustness library</a>
+            
+        </td>
+        <td class="catd">62.56%</td>
+        <td class="aatd">29.22%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">GitHub,<br>Oct 2019</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">4</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2001.03994" target="_blank">Fast is better than free: Revisiting adversarial training</a>
+            
+            <br>
+            <span class="td-footer">
+                Focuses on fast adversarial training.
+            </span>
+            
+        </td>
+        <td class="catd">55.62%</td>
+        <td class="aatd">26.24%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-18</td>
+        <td class="venuetd">ICLR 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">5</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2007.08489" target="_blank">Do Adversarially Robust ImageNet Models Transfer Better?</a>
+            
+        </td>
+        <td class="catd">52.92%</td>
+        <td class="aatd">25.32%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">NeurIPS 2020</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">6</td>
+        <td class="methoddt">
+            <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
+            
+        </td>
+        <td class="catd">76.52%</td>
+        <td class="aatd">0.0%</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">N/A</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $("#imagenet_leaderboard_Linf").DataTable({
+            lengthMenu: [15, 25, 50, 75, 100],
+            "drawCallback": function (settings) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            },
+            language: {
+                searchPlaceholder: "Papers, architectures, venues"
+            }
+        });
+    });
+</script>
