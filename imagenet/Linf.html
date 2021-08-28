@@ -4,13 +4,27 @@
         <th class="rank">Rank</th>
         <th class="method">Method</th>
         <th class="ca">
-            Standard <br/>
+            Standard<br/>
             accuracy
         </th>
+        
         <th class="aa">
-            Robust <br/>
+            AutoAttack<br/>
+            robust<br/>
             accuracy
         </th>
+        <th class="aa-ext">
+            Best known<br/>
+            robust<br/>
+            accuracy
+        </th>
+        <th class="aa-ext">
+            AA eval.<br/>
+            potentially<br/>
+            unreliable
+        </th>
+        
+        
         <th class="extra-data">Extra <br/>data</th>
         <th class="arch">Architecture</th>
         <th class="venue">Venue</th>
@@ -26,6 +40,10 @@
         </td>
         <td class="catd">68.46%</td>
         <td class="aatd">38.14%</td>
+        
+        <td class="aa-extd">38.14%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-50-2</td>
         <td class="venuetd">NeurIPS 2020</td>
@@ -39,6 +57,10 @@
         </td>
         <td class="catd">64.02%</td>
         <td class="aatd">34.96%</td>
+        
+        <td class="aa-extd">34.96%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">NeurIPS 2020</td>
@@ -52,6 +74,10 @@
         </td>
         <td class="catd">62.56%</td>
         <td class="aatd">29.22%</td>
+        
+        <td class="aa-extd">29.22%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">GitHub,<br>Oct 2019</td>
@@ -70,6 +96,10 @@
         </td>
         <td class="catd">55.62%</td>
         <td class="aatd">26.24%</td>
+        
+        <td class="aa-extd">26.24%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-18</td>
         <td class="venuetd">ICLR 2020</td>
@@ -83,6 +113,10 @@
         </td>
         <td class="catd">52.92%</td>
         <td class="aatd">25.32%</td>
+        
+        <td class="aa-extd">25.32%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">NeurIPS 2020</td>
@@ -96,6 +130,10 @@
         </td>
         <td class="catd">76.52%</td>
         <td class="aatd">0.0%</td>
+        
+        <td class="aa-extd">0.0%</td>
+        <td class="flagsd">Unknown</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">N/A</td>
@@ -103,7 +141,6 @@
     
     </tbody>
 </table>
-
 <script>
     $(document).ready(function () {
         $("#imagenet_leaderboard_Linf").DataTable({
@@ -113,7 +150,13 @@
             },
             language: {
                 searchPlaceholder: "Papers, architectures, venues"
-            }
+            },
+            
+            columnDefs: [
+                { width: "15%", targets: 4 },
+                { width: "15%", targets: 5 }
+            ]
+            
         });
     });
 </script>

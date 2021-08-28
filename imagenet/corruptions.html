@@ -4,13 +4,16 @@
         <th class="rank">Rank</th>
         <th class="method">Method</th>
         <th class="ca">
-            Standard <br/>
+            Standard<br/>
             accuracy
         </th>
+        
+        
         <th class="aa">
             Robust <br/>
             accuracy
         </th>
+        
         <th class="extra-data">Extra <br/>data</th>
         <th class="arch">Architecture</th>
         <th class="venue">Venue</th>
@@ -26,6 +29,7 @@
         </td>
         <td class="catd">76.88%</td>
         <td class="aatd">51.61%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICCV 2021</td>
@@ -39,6 +43,7 @@
         </td>
         <td class="catd">76.98%</td>
         <td class="aatd">46.91%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2020</td>
@@ -57,6 +62,7 @@
         </td>
         <td class="catd">74.88%</td>
         <td class="aatd">44.48%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2019</td>
@@ -75,6 +81,7 @@
         </td>
         <td class="catd">77.44%</td>
         <td class="aatd">40.77%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2019</td>
@@ -88,6 +95,7 @@
         </td>
         <td class="catd">76.52%</td>
         <td class="aatd">38.12%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">N/A</td>
@@ -106,6 +114,7 @@
         </td>
         <td class="catd">60.24%</td>
         <td class="aatd">37.95%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2019</td>
@@ -119,6 +128,7 @@
         </td>
         <td class="catd">68.46%</td>
         <td class="aatd">34.60%</td>
+        
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-50-2</td>
         <td class="venuetd">NeurIPS 2020</td>
@@ -126,7 +136,6 @@
     
     </tbody>
 </table>
-
 <script>
     $(document).ready(function () {
         $("#imagenet_leaderboard_corruptions").DataTable({
@@ -136,7 +145,8 @@
             },
             language: {
                 searchPlaceholder: "Papers, architectures, venues"
-            }
+            },
+            
         });
     });
 </script>
