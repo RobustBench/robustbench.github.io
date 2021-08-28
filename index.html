@@ -235,7 +235,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
 <!--          <div style="opacity:0;">1<br>1<br>1<br>1</div> &lt;!&ndash; Needed to introduce a margin for the navigation bar between leaderboards &ndash;&gt;-->
           Leaderboard:
           <span class="heading-math">CIFAR-10, \( \ell_\infty = 8/255 \)</span>,
-          Untargeted
+          untargeted attack
         </p>
       </div>
 
@@ -248,7 +248,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
           <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-10, \( \ell_2 = 0.5 \)</span>,
-          Untargeted
+          untargeted attack
         </p>
       </div>
 
@@ -274,7 +274,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
           <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
           Leaderboard:
           <span class="heading-math">CIFAR-100, \( \ell_\infty = 8/255 \)</span>,
-          Untargeted
+          untargeted attack
         </p>
       </div>
 
@@ -291,8 +291,33 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         </p>
       </div>
 
-<!--      <div id="div_cifar100_corruptions_pre_margin" style="margin-top: 100px;">123</div>-->
       <div id="div_cifar100_corruptions"></div>
+    </section>
+
+    <section>
+      <div class="heading" id="div_imagenet_Linf_heading">
+        <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+          Leaderboard:
+          <span class="heading-math">ImageNet, \( \ell_\infty = 4/255 \)</span>,
+          untargeted attack
+        </p>
+      </div>
+
+      <div id="div_imagenet_Linf"></div>
+    </section>
+
+    <section>
+      <div class="heading" id="div_imagenet_corruptions_heading">
+        <p>
+          <div style="opacity:0;">1<br>1<br>1<br>1</div> <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+          Leaderboard:
+          <span class="heading-math">ImageNet, Common Corruptions</span>,
+          ImageNet-C
+        </p>
+      </div>
+
+      <div id="div_imagenet_corruptions"></div>
     </section>
 
     <div class="vspace30"></div>
