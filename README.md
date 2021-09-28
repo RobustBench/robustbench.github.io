@@ -21,5 +21,8 @@ In particular, **we accept only defenses that are (1) have in general non-zero g
 harder but do not substantially improve robustness ([Carlini et al., (2019)](https://arxiv.org/abs/1902.06705)) except those
 that can present concrete provable guarantees (e.g. [Cohen et al., (2019)](https://arxiv.org/abs/1902.02918)).
 
+To prevent potential overadaptation of new defenses to AutoAttack, we also welcome external evaluations based on **adaptive attacks**, especially where AutoAttack [flags](https://github.com/fra31/auto-attack/blob/master/flags_doc.md) a potential overestimation of robustness. For each model, we are interested in the best known robust accuracy and see AutoAttack and adaptive attacks as complementary to each other.
+
+
 ## Contributions
 Contributions both to the website and [model zoo](https://github.com/RobustBench/robustbench) are very welcome, as well as any suggestions for improving the project! We would be happy to hear any feedback on how to make it better and more comprehensive.

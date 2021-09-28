@@ -96,7 +96,7 @@
           The goal of <strong>RobustBench</strong> is to systematically track
           the <em>real</em> progress in adversarial robustness. There are
           already
-          <a href="https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html">more than 2&#39;000
+          <a href="https://nicholas.carlini.com/writing/2019/all-adversarial-example-papers.html">more than 3&#39;000
             papers</a>
           on this topic, but it is still unclear which approaches really work
           and which only lead to
@@ -113,7 +113,14 @@
           we open source the
           <a href="https://github.com/RobustBench/robustbench">RobustBench library</a>
           that contains models used for the leaderboard to facilitate their
-          usage for downstream applications.
+          usage for downstream applications. <br><br>
+
+          To prevent potential overadaptation of new defenses to AutoAttack, we also welcome external evaluations based
+          on <em>adaptive attacks</em>, especially where AutoAttack <a href="https://github.com/fra31/auto-attack/blob/master/flags_doc.md">flags</a>
+          a potential overestimation of robustness. For each model, we are interested in the best known robust accuracy
+          and see AutoAttack and adaptive attacks as complementary.
+
+
         </p>
         <div class="flexbox-container features">
           <div class="element">
@@ -122,7 +129,7 @@
             </div>
             <p>
               Up-to-date leaderboard based <br />
-              on 90+ models
+              on 120+ models
             </p>
           </div>
           <div class="element">
@@ -130,7 +137,7 @@
               <img src="https://img.icons8.com/ios-glyphs/80/000000/user-credentials.png" />
             </div>
             <p>
-              Unified access to 60+ state-of-the-art <br />robust models via
+              Unified access to 80+ state-of-the-art <br />robust models via
               Model Zoo
             </p>
           </div>
@@ -152,7 +159,7 @@
 # !pip install git+https://github.com/RobustBench/robustbench.git@v0.2.1
 from robustbench.utils import load_model
 # Load a model from the model zoo
-model = load_model(model_name='Carmon2019Unlabeled',
+model = load_model(model_name='Rebuffi2021Fixing_70_16_cutmix_extra',
                    dataset='cifar10',
                    threat_model='Linf')
 
@@ -168,7 +175,7 @@ clean_acc, robust_acc = benchmark(model,
               <pre style="margin: 0; line-height: 125%"><span style="color: #888888"># !pip install git+https://github.com/RobustBench/robustbench@v0.2.1</span>
 <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">robustbench.utils</span> <span style="color: #008800; font-weight: bold">import</span> load_model
 <span style="color: #888888"># Load a model from the model zoo</span>
-model <span style="color: #333333">=</span> load_model(model_name<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;Carmon2019Unlabeled&#39;</span>,
+model <span style="color: #333333">=</span> load_model(model_name<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;Rebuffi2021Fixing_70_16_cutmix_extra&#39;</span>,
                    dataset<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;cifar10&#39;</span>,
                    threat_model<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;Linf&#39;</span>)
 
@@ -330,40 +337,30 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
       </div>
 
       <p class="qa-box">
-        <span class="question">&#10148; Wait, how does this leaderboard differ from the
+        <span class="question">&#10148; How does the RobustBench leaderboard differ from the
           <a href="https://github.com/fra31/auto-attack">AutoAttack leaderboard</a>? 🤔
         </span>
         <br />
-        <span class="answer"> The <a href="https://github.com/fra31/auto-attack">AutoAttack leaderboard</a> is
-          maintained simultaneously
-          with the <strong>RobustBench</strong> L2 / Linf leaderboards by <a href="https://github.com/fra31">Francesco
-            Croce</a>, and all
-          the changes to either of them will be synchronized (given that the 3 restrictions on the models are met
-          for the <strong>RobustBench</strong> leaderboard). One can see the current L2 / Linf
-          <strong>RobustBench</strong> leaderboard as a
-          continuously updated fork of the <a href="https://github.com/fra31/auto-attack">AutoAttack leaderboard</a>
-          extended
-          by adaptive evaluations, Model Zoo, and clear restrictions on the models we accept. And in the future,
-          we will extend <strong>RobustBench</strong> with other threat models and potentially with a different
-          standardized attack
-          if it's shown to perform better than AutoAttack.
+        <span class="answer"> The <a href="https://github.com/fra31/auto-attack">AutoAttack leaderboard</a> was
+          the starting point of RobustBench. Now only the RobustBench leaderboard is actively maintained.
         </span>
       </p>
 
       <p class="qa-box">
-        <span class="question">&#10148; Wait, how is it different from
+        <span class="question">&#10148; How does the RobustBench leaderboard differ from
           <a href="https://www.robust-ml.org/">robust-ml.org</a>? 🤔
         </span>
         <br />
         <span class="answer"><a href="https://www.robust-ml.org/">robust-ml.org</a> focuses on
           <em>adaptive</em> evaluations, but we provide a
-          <strong>standardized benchmark</strong>. Adaptive evaluations are
-          great (e.g., see
+          <strong>standardized benchmark</strong>. Adaptive evaluations have been very useful (e.g., see
           <a href="https://arxiv.org/abs/2002.08347">Tramer et al., 2020</a>),
-          but very time-consuming and cannot be standardized. Instead, we argue
-          that one can estimate robustness accurately <em>without</em> adaptive
+          but they are also very time-consuming and cannot be standardized by definition. Instead, we argue
+          that one can estimate robustness accurately mostly <em>without</em> adaptive
           attacks but for this one has to introduce some restrictions on the
-          considered models. See <a href="https://arxiv.org/abs/2010.09670">our paper</a> for more details.
+          considered models (see <a href="https://arxiv.org/abs/2010.09670">our paper</a> for more details).
+          However, we do welcome adaptive evaluations and we are always interested in showing the best known
+          robust accuracy.
         </span>
       </p>
 
@@ -406,11 +403,13 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         <span class="question">&#10148; What about verified adversarial robustness? 🤔
         </span>
         <br />
-        <span class="answer">We specifically focus on defenses which improve
+        <span class="answer">We mostly focus on defenses which improve
           <em>empirical</em> robustness, given the lack of clarity regarding
           which approaches really improve robustness and which only make some
-          particular attacks unsuccessful. For methods targeting verified
-          robustness, we encourage the readers to check out
+          particular attacks unsuccessful.
+          However, we do not restrict submissions of verifiably robust models (e.g., we have
+          <a href="https://arxiv.org/abs/1906.06316">Zhang et al. (2019)</a> in our CIFAR-10 Linf leaderboard).
+          For methods targeting verified robustness, we encourage the readers to check out
           <a href="https://arxiv.org/abs/1902.08722">Salman et al. (2019)</a>
           and <a href="https://arxiv.org/abs/2009.04131">Li et al. (2020)</a>.
         </span>
@@ -422,7 +421,7 @@ clean_acc, robust_acc <span style="color: #333333">=</span> benchmark(model,
         </span>
         <br />
         <span class="answer">We will be happy to add a better attack or any adaptive evaluation
-          that would complement our default standardized attacks.</span>
+          that would complement our default standardized attacks!</span>
       </p>
     </section>
 
