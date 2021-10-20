@@ -1,4 +1,4 @@
-<table id="cifar10_leaderboard_corruptions" class="datatable" style="width: 100%">
+<table id="cifar100_leaderboard_corruptions" class="datatable" style="width: 100%">
     <thead>
     <tr>
         <th class="rank">Rank</th>
@@ -32,8 +32,8 @@
             </span>
             
         </td>
-        <td class="catd">96.56%</td>
-        <td class="aatd">92.78%</td>
+        <td class="catd">79.93%</td>
+        <td class="aatd">71.08%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-18-2</td>
@@ -43,20 +43,20 @@
     <tr>
         <td class="ranktd">2</td>
         <td class="methoddt">
-            <a href="https://arxiv.org/abs/2104.01086" target="_blank">Defending Against Image Corruptions Through Adversarial Augmentations</a>
+            <a href="https://arxiv.org/abs/2106.09129" target="_blank">A Winning Hand: Compressing Deep Networks Can Improve Out-Of-Distribution Robustness</a>
             
             <br>
             <span class="td-footer">
-                Uses extra data indirectly via a super resolution and autoencoder networks that were pre-trained on other datasets.
+                Ensemble of binary weight networks each of which are pruned to 95% sparsity
             </span>
             
         </td>
-        <td class="catd">94.93%</td>
-        <td class="aatd">92.17%</td>
+        <td class="catd">78.50%</td>
+        <td class="aatd">69.09%</td>
         
-        <td class="datatd">&#9745;</td>
-        <td class="archtd">ResNet-50</td>
-        <td class="venuetd">arXiv, Apr 2021</td>
+        <td class="datatd">&#215;</td>
+        <td class="archtd">WideResNet-18-2</td>
+        <td class="venuetd">NeurIPS 2021</td>
     </tr>
     
     <tr>
@@ -70,8 +70,8 @@
             </span>
             
         </td>
-        <td class="catd">96.66%</td>
-        <td class="aatd">90.94%</td>
+        <td class="catd">78.41%</td>
+        <td class="aatd">66.45%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-18-2</td>
@@ -85,12 +85,12 @@
             
             <br>
             <span class="td-footer">
-                Ensemble of binary weight networks each of which are pruned to 95% sparsity
+                Binary weight network trained with AugMix and pruned to 95% sparsity
             </span>
             
         </td>
-        <td class="catd">95.09%</td>
-        <td class="aatd">90.15%</td>
+        <td class="catd">77.69%</td>
+        <td class="aatd">65.26%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-18-2</td>
@@ -100,20 +100,15 @@
     <tr>
         <td class="ranktd">5</td>
         <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.02325" target="_blank">On the effectiveness of adversarial training against common corruptions</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained with RLAT and AugMix.
-            </span>
+            <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
             
         </td>
-        <td class="catd">94.75%</td>
-        <td class="aatd">89.60%</td>
+        <td class="catd">78.90%</td>
+        <td class="aatd">65.14%</td>
         
         <td class="datatd">&#215;</td>
-        <td class="archtd">ResNet-18</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
+        <td class="archtd">ResNeXt29_32x4d</td>
+        <td class="venuetd">ICLR 2020</td>
     </tr>
     
     <tr>
@@ -122,22 +117,8 @@
             <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
             
         </td>
-        <td class="catd">95.83%</td>
-        <td class="aatd">89.09%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">ResNeXt29_32x4d</td>
-        <td class="venuetd">ICLR 2020</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">7</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/1912.02781" target="_blank">AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</a>
-            
-        </td>
-        <td class="catd">95.08%</td>
-        <td class="aatd">88.82%</td>
+        <td class="catd">76.28%</td>
+        <td class="aatd">64.11%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-40-2</td>
@@ -145,179 +126,27 @@
     </tr>
     
     <tr>
+        <td class="ranktd">7</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
+            
+            <br>
+            <span class="td-footer">
+                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
+            </span>
+            
+        </td>
+        <td class="catd">69.15%</td>
+        <td class="aatd">56.00%</td>
+        
+        <td class="datatd">&#9745;</td>
+        <td class="archtd">WideResNet-70-16</td>
+        <td class="venuetd">arXiv, Oct 2020</td>
+    </tr>
+    
+    <tr>
         <td class="ranktd">8</td>
         <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.02325" target="_blank">On the effectiveness of adversarial training against common corruptions</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained with RLAT and AugMix without the JSD term.
-            </span>
-            
-        </td>
-        <td class="catd">94.77%</td>
-        <td class="aatd">88.53%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">PreActResNet-18</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">9</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2106.09129" target="_blank">A Winning Hand: Compressing Deep Networks Can Improve Out-Of-Distribution Robustness</a>
-            
-            <br>
-            <span class="td-footer">
-                Binary weight network trained with AugMix and pruned to 95% sparsity
-            </span>
-            
-        </td>
-        <td class="catd">94.87%</td>
-        <td class="aatd">88.32%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">WideResNet-18-2</td>
-        <td class="venuetd">NeurIPS 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">10</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.01946" target="_blank">Fixing Data Augmentation to Improve Adversarial Robustness</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-            </span>
-            
-        </td>
-        <td class="catd">92.23%</td>
-        <td class="aatd">88.23%</td>
-        
-        <td class="datatd">&#9745;</td>
-        <td class="archtd">WideResNet-70-16</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">11</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-            </span>
-            
-        </td>
-        <td class="catd">94.74%</td>
-        <td class="aatd">87.68%</td>
-        
-        <td class="datatd">&#9745;</td>
-        <td class="archtd">WideResNet-70-16</td>
-        <td class="venuetd">arXiv, Oct 2020</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">12</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.02325" target="_blank">On the effectiveness of adversarial training against common corruptions</a>
-            
-            <br>
-            <span class="td-footer">
-                Training with AugMix without the JSD term.
-            </span>
-            
-        </td>
-        <td class="catd">94.97%</td>
-        <td class="aatd">86.60%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">PreActResNet-18</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">13</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.02325" target="_blank">On the effectiveness of adversarial training against common corruptions</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained with 50% Gaussian noise per batch. Note: Gaussian noise is contained in CIFAR-10-C.
-            </span>
-            
-        </td>
-        <td class="catd">93.24%</td>
-        <td class="aatd">85.04%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">PreActResNet-18</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">14</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained for \(\ell_2 \) robustness with \(\varepsilon = 0.5\).
-            </span>
-            
-        </td>
-        <td class="catd">90.90%</td>
-        <td class="aatd">84.90%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">WideResNet-70-16</td>
-        <td class="venuetd">arXiv, Oct 2020</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">15</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.02325" target="_blank">On the effectiveness of adversarial training against common corruptions</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained with RLAT.
-            </span>
-            
-        </td>
-        <td class="catd">93.10%</td>
-        <td class="aatd">84.10%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">PreActResNet-18</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">16</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2103.01946" target="_blank">Fixing Data Augmentation to Improve Adversarial Robustness</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
-            </span>
-            
-        </td>
-        <td class="catd">92.23%</td>
-        <td class="aatd">82.82%</td>
-        
-        <td class="datatd">&#9745;</td>
-        <td class="archtd">WideResNet-70-16</td>
-        <td class="venuetd">arXiv, Mar 2021</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">17</td>
-        <td class="methoddt">
             <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
             
             <br>
@@ -326,52 +155,19 @@
             </span>
             
         </td>
-        <td class="catd">91.10%</td>
-        <td class="aatd">81.84%</td>
-        
-        <td class="datatd">&#9745;</td>
-        <td class="archtd">WideResNet-70-16</td>
-        <td class="venuetd">arXiv, Oct 2020</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">18</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2010.03593" target="_blank">Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples</a>
-            
-            <br>
-            <span class="td-footer">
-                Trained for \(\ell_{\infty} \) robustness with \(\varepsilon = 8/255\).
-            </span>
-            
-        </td>
-        <td class="catd">85.29%</td>
-        <td class="aatd">76.37%</td>
+        <td class="catd">60.86%</td>
+        <td class="aatd">49.46%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-70-16</td>
         <td class="venuetd">arXiv, Oct 2020</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">19</td>
-        <td class="methoddt">
-            <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
-            
-        </td>
-        <td class="catd">94.78%</td>
-        <td class="aatd">73.46%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">WideResNet-28-10</td>
-        <td class="venuetd">N/A</td>
     </tr>
     
     </tbody>
 </table>
 <script>
     $(document).ready(function () {
-        $("#cifar10_leaderboard_corruptions").DataTable({
+        $("#cifar100_leaderboard_corruptions").DataTable({
             lengthMenu: [15, 25, 50, 75, 100],
             "drawCallback": function (settings) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
