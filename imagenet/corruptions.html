@@ -11,7 +11,22 @@
         
         <th class="aa">
             Robust <br/>
-            accuracy
+            accuracy &#8593; (IN-C)
+        </th>
+
+        <th class="aa_3d">
+            Robust <br/>
+            accuracy &#8593; (IN-3DCC)
+        </th>
+
+        <th class="mce">
+            mCE <br/>
+            &#8595; (IN-C)
+        </th>
+
+        <th class="mce_3d">
+            mCE <br/>
+            &#8595; (IN-3DCC)
         </th>
         
         <th class="extra-data">Extra <br/>data</th>
@@ -20,35 +35,41 @@
     </tr>
     </thead>
     <tbody>
-    
+
     <tr>
         <td class="ranktd">1</td>
+        <td class="methoddt">
+            <a href="https://arxiv.org/abs/2006.16241" target="_blank">The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution Generalization</a>
+            
+        </td>
+        <td class="catd">76.88%</td>
+        <td class="aatd">52.65%</td>
+        <td class="aatd_3d">54.13%</td>
+        <td class="mce">60.32%</td>
+        <td class="mce_3d">61.02%</td>
+
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">ICCV 2021</td>
+    </tr>
+    
+    <tr>
+        <td class="ranktd">2</td>
         <td class="methoddt">
             <a href="https://arxiv.org/pdf/2202.01263.pdf" target="_blank">NoisyMix: Boosting Robustness by Combining Data Augmentations, Stability Training, and Noise Injections</a>
             
         </td>
         <td class="catd">77.14%</td>
         <td class="aatd">52.25%</td>
+        <td class="aatd_3d">53.10%</td>
+        <td class="mce">60.70%</td>
+        <td class="mce_3d">62.33%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">arXiv, Feb 2022</td>
     </tr>
-    
-    <tr>
-        <td class="ranktd">2</td>
-        <td class="methoddt">
-            <a href="https://arxiv.org/abs/2006.16241" target="_blank">The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution Generalization</a>
-            
-        </td>
-        <td class="catd">76.88%</td>
-        <td class="aatd">51.61%</td>
         
-        <td class="datatd">&#215;</td>
-        <td class="archtd">ResNet-50</td>
-        <td class="venuetd">ICCV 2021</td>
-    </tr>
-    
     <tr>
         <td class="ranktd">3</td>
         <td class="methoddt">
@@ -56,7 +77,10 @@
             
         </td>
         <td class="catd">76.98%</td>
-        <td class="aatd">46.91%</td>
+        <td class="aatd">48.31%</td>
+        <td class="aatd_3d">51.35%</td>
+        <td class="mce">65.33%</td>
+        <td class="mce_3d">64.51%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
@@ -75,7 +99,10 @@
             
         </td>
         <td class="catd">74.88%</td>
-        <td class="aatd">44.48%</td>
+        <td class="aatd">45.52%</td>
+        <td class="aatd_3d">48.09%</td>
+        <td class="mce">68.95%</td>
+        <td class="mce_3d">68.89%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
@@ -94,29 +121,18 @@
             
         </td>
         <td class="catd">77.44%</td>
-        <td class="aatd">40.77%</td>
+        <td class="aatd">41.72%</td>
+        <td class="aatd_3d">46.92%</td>
+        <td class="mce">73.52%</td>
+        <td class="mce_3d">70.11%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2019</td>
     </tr>
-    
+        
     <tr>
         <td class="ranktd">6</td>
-        <td class="methoddt">
-            <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
-            
-        </td>
-        <td class="catd">76.52%</td>
-        <td class="aatd">38.12%</td>
-        
-        <td class="datatd">&#215;</td>
-        <td class="archtd">ResNet-50</td>
-        <td class="venuetd">N/A</td>
-    </tr>
-    
-    <tr>
-        <td class="ranktd">7</td>
         <td class="methoddt">
             <a href="https://arxiv.org/abs/1811.12231" target="_blank">ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness</a>
             
@@ -127,11 +143,31 @@
             
         </td>
         <td class="catd">60.24%</td>
-        <td class="aatd">37.95%</td>
+        <td class="aatd">39.53%</td>
+        <td class="aatd_3d">37.80%</td>
+        <td class="mce">77.14%</td>
+        <td class="mce_3d">83.33%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">ResNet-50</td>
         <td class="venuetd">ICLR 2019</td>
+    </tr>
+
+    <tr>
+        <td class="ranktd">7</td>
+        <td class="methoddt">
+            <a href="https://github.com/RobustBench/robustbench/" target="_blank">Standardly trained model</a>
+            
+        </td>
+        <td class="catd">76.52%</td>
+        <td class="aatd">39.23%</td>
+        <td class="aatd_3d">44.77%</td>
+        <td class="mce">76.64%</td>
+        <td class="mce_3d">72.95%</td>
+        
+        <td class="datatd">&#215;</td>
+        <td class="archtd">ResNet-50</td>
+        <td class="venuetd">N/A</td>
     </tr>
     
     <tr>
@@ -141,7 +177,10 @@
             
         </td>
         <td class="catd">68.46%</td>
-        <td class="aatd">34.60%</td>
+        <td class="aatd">35.69%</td>
+        <td class="aatd_3d">39.71%</td>
+        <td class="mce">80.42%</td>
+        <td class="mce_3d">79.65%</td>
         
         <td class="datatd">&#215;</td>
         <td class="archtd">WideResNet-50-2</td>
