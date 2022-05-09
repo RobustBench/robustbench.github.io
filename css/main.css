@@ -334,32 +334,36 @@ section .heading {
 
 /* Leaderboard table css */
 table .arch {
-  width: 15%;
+  width: 13%;
 }
 
 table .venue {
-  width: 12%;
+  width: 10%;
 }
 table .rank {
-  width: 7%;
+  width: 5%;
 }
 table .method {
-  width: 30%;
+  width: 40%;
 }
 table .extra-data {
-  width: 8%;
+  width: 6%;
+}
+table .ca {
+  width: 10%;
 }
 table .aa {
   width: 12%;
 }
-table .ca {
-  width: 10%;
+table .aa_3d {
+  width: 12%;
 }
 
 table .aatd,
 .catd,
 .methoddt,
-.aa-extd {
+.aa-extd,
+.aatd_3d {
   font-size: 1.1em;
 }
 
@@ -368,7 +372,7 @@ table .datatd, .flagsd-emoji {
 }
 
 table .catd,
-.aatd, .aa-extd {
+.aatd, .aa-extd, .aatd_3d {
   font-family: monospace;
 }
 
